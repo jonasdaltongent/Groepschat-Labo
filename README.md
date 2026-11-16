@@ -69,7 +69,7 @@ Repository [`jonasdaltongent/Groepschat-Labo`](https://github.com/jonasdaltongen
 
 ### Stap 2 — De opdracht in Classroom, met de koppeling
 
-De opdracht staat als **concept** klaar in `3MWWE - Informatica`; inplannen voor **donderdag 19 november 2026 om 14.05 uur** (een
+De opdracht staat sinds 16-11-2026 als **concept** klaar in `3MWWE - Informatica` (id `162842462733`, nog niet ingepland); inplannen voor **donderdag 19 november 2026 om 14.05 uur** (een
 half uur vóór het 8ste lesuur van 14.35 uur) doet de hoofdsessie. Classroom publiceert dan zelf.
 
 | | Opdracht: **Les 5 — Netiquette, phishing en de groepschat** |
