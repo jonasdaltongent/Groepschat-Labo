@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lespagina · Les 5 · Netiquette, phishing en de groepschat · Onderzoekslabo</title>
+  <link rel="icon" href="assets/logos/lespagina-icon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-storage="groepschat-labo_v1_" data-modus-start="kort" data-laatste-stap="6" data-ai-hulp="uit">
+
+<!-- Pictogrammen: eenvoudige lijntekeningen, eigen werk. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4 2.5 4H5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2a5 5 0 0 1 5 5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M4 14v6h16v-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10.5V6a1.5 1.5 0 0 1 3 0v7.5"/><path d="M8 11.5l-1.5-1.5a1.6 1.6 0 0 0-2.3 2.3l3.6 4.2A6.5 6.5 0 0 0 17 13.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<div class="teacher-banner">Leraarweergave: de roze kaders tonen waar je een screenshot kan plaatsen. Leerlingen zien die kaders niet.</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" title="Naar het begin van de les">
+      <img src="assets/onderzoekslabo-logo.svg" alt="Onderzoekslabo Jongeren &amp; Welzijn">
+      <span class="brand-lesson">Les 5 · Netiquette, phishing en de groepschat</span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <img class="dalton-mark" src="assets/dalton-gent-logo.png" alt="GO! Dalton Gent">
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ============ LINKS: de route ============ -->
+  <nav class="route" aria-label="Stappenplan">
+    <p class="route-title">Stappenplan</p>
+    <button class="nav-btn" type="button" data-step="start"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="nav-lbl">Start</span></button>
+    <button class="nav-btn" type="button" data-step="theorie"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><span class="nav-lbl">Theoriekaart</span></button>
+
+    <p class="route-group">Eerst alleen</p>
+    <button class="nav-btn" type="button" data-step="1"><span class="nav-num"><span class="nav-n">1</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Start</span></button>
+    <button class="nav-btn" type="button" data-step="2"><span class="nav-num"><span class="nav-n">2</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Echt of phishing?</span></button>
+    <button class="nav-btn" type="button" data-step="3"><span class="nav-num"><span class="nav-n">3</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">De groepschat ontleden</span></button>
+
+    <p class="route-group">Samen met je duopartner</p>
+    <button class="nav-btn" type="button" data-step="4"><span class="nav-num"><span class="nav-n">4</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Het gedeelde document</span></button>
+    <button class="nav-btn" type="button" data-step="5"><span class="nav-num"><span class="nav-n">5</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Onze gedragscode</span></button>
+
+    <p class="route-group">Afronden</p>
+    <button class="nav-btn" type="button" data-step="6"><span class="nav-num"><span class="nav-n">6</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Inleveren</span></button>
+    <button class="nav-btn extra" type="button" data-step="extra"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="nav-lbl">Extra</span></button>
+  </nav>
+
+  <!-- ============ MIDDEN: één stap tegelijk ============ -->
+  <main id="main">
+
+    <!-- ===== START ===== -->
+    <section class="pane" id="pane-start" aria-labelledby="h-start">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-where">Toegepaste Informatica · les 5</span></div>
+            <h1 id="h-start">Netiquette, phishing en de groepschat</h1>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_welkom.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Ines van het Onderzoekslabo wil een gedragscode voor de groepschats. Eerst ontleed je een groepschat die misliep, dan schrijf je met je duopartner de regels.</p>
+
+          <h2 class="sec">Wat heb je nodig?</h2>
+          <ol class="nodig">
+            <li class="nodig-item">
+              <div class="mock mock-opdracht" aria-hidden="true"><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Les 5 — Netiquette, phishing en de groepschat</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina · Les 5</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip"><img class="logo" src="assets/logos/docs.svg" alt=""><span>Groepschat-onderzoekslabo</span></div><div class="mo-knop">Inleveren</div></div></div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/classroom.svg" alt="">De opdracht in Google Classroom</p>
+              <p class="nodig-uitleg">Hier begin je. Hier lever je in.</p>
+            </li>
+            <li class="nodig-item">
+              <div class="mock mock-lespagina" aria-hidden="true">
+                <div class="ml-balk"></div>
+                <div class="ml-midden">
+                  <div class="ml-route"><span></span><span></span><span></span><span></span></div>
+                  <div class="ml-stap"><span class="ml-tag">Stap 1</span><span class="ml-lijn"></span><span class="ml-lijn kort"></span><span class="ml-lijn"></span></div>
+                </div>
+                <div class="ml-hier">Je bent hier</div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/lespagina.webp" alt="">Deze lespagina</p>
+              <p class="nodig-uitleg">Hier lees je wat je moet doen.</p>
+            </li>
+            <li class="nodig-item inleveren">
+              <div class="mock mock-werkdocument" aria-hidden="true">
+                <div class="mw-balk"><img class="logo" src="assets/logos/docs.svg" alt="">Groepschat-onderzoekslabo</div>
+                <div class="mw-blad">
+                  <div class="mw-venster">
+                    <div class="mw-kop">Deel 3 — Onze gedragscode</div>
+                    <div class="mw-rijen"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/docs.svg" alt="">Je werkdocument Groepschat-onderzoekslabo</p>
+              <p class="nodig-uitleg">Hier werk je. Dit lever je in.</p>
+            </li>
+          </ol>
+
+          <h2 class="sec">Dit maak je vandaag</h2>
+          <div class="vandaag">
+            <div class="deeldoc code" role="img" aria-label="Tekening van het gedeelde document dat jullie maken: een tabel met de kolommen Nr, Regel, een letter van a tot e en Geschreven door, met drie rijen, en daaronder een reactie met een naam na het @-teken.">
+              <div class="dd-kop"><img class="logo" src="assets/logos/docs.svg" alt="">Gedragscode groepschat</div>
+              <div class="dd-rij dd-hoofd"><span>Nr</span><span>Regel</span><span>a–e</span><span>Door</span></div>
+              <div class="dd-rij"><span class="dd-nr">1</span><span><i></i></span><span class="dd-vak"></span><span class="dd-vak"><i class="kort"></i></span></div>
+              <div class="dd-rij"><span class="dd-nr">2</span><span><i></i></span><span class="dd-vak"></span><span class="dd-vak"><i class="kort"></i></span></div>
+              <div class="dd-rij"><span class="dd-nr">3</span><span><i></i></span><span class="dd-vak"></span><span class="dd-vak"><i class="kort"></i></span></div>
+              <div class="dd-reactie"><b>@naam</b> <span>…?</span><span class="dd-toegewezen">Oplossen</span></div>
+            </div>
+            <p>Eén gedeeld document, met jullie gedragscode.</p>
+          </div>
+
+          <h2 class="sec">Na deze les kan je</h2>
+          <ul class="doelen">
+            <li>een vals bericht herkennen;</li>
+            <li>een groepschat ontleden met het communicatiemodel;</li>
+            <li>samen een gedragscode schrijven.</li>
+          </ul>
+
+          <h2 class="sec">Vast? Probeer het in deze volgorde</h2>
+          <ol class="vast">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg><span>Klik in de stap op <em>Toon stapjes</em></span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Je duopartner</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg><span>Je leraar</span></li>
+          </ol>
+
+          <p class="start-cta"><button class="btn btn-primary" type="button" data-goto="1">Start met stap 1 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></p>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- ===== THEORIEKAART ===== -->
+    <section class="pane" id="pane-theorie" aria-labelledby="h-theorie">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-where">Spiekbriefje</span></div>
+          <h2 id="h-theorie">Theoriekaart</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Alles op één plek. Kom hier terug als je iets niet meer weet.</p>
+          <div class="t-grid">
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>Een vals bericht herkennen</h3>
+              <ul>
+                <li>Kijk naar de afzender, het woord vóór <em>.example</em> in de link, en of het onverwacht, dringend of vreemd is.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>Vals bericht? Wat doe je?</h3>
+              <ul>
+                <li>Niet klikken, geen bijlage openen, niet antwoorden.</li>
+                <li>Stuur het door naar <strong>verdacht@safeonweb.be</strong>.</li>
+                <li>Klikte je toch? Typ niets in, en verander je wachtwoord als je het al typte.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Delen: wie mag wat?</h3>
+              <ul>
+                <li><strong>Kijker</strong> kijkt. <strong>Reageerder</strong> kijkt en reageert.</li>
+                <li><strong>Bewerker</strong> kijkt, reageert en bewerkt.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Een reactie met @</h3>
+              <ul>
+                <li>Typ <strong>@</strong> en een naam: die persoon krijgt je reactie per e-mail.</li>
+                <li>Is het geregeld? Klik op <strong>Oplossen</strong>.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg>Je ziet dat iemand gepest wordt</h3>
+              <ul>
+                <li>Doe niet mee.</li>
+                <li>Maak een schermafbeelding als bewijs.</li>
+                <li>Praat erover met iemand die je vertrouwt.</li>
+              </ul>
+            </section>
+            <section class="t-card wide">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Woorden</h3>
+              <table class="t-rows">
+                <tr><th>communicator</th><td>wie het bericht stuurt (de zender)</td></tr>
+                <tr><th>encoderen</th><td>je bedoeling omzetten in woorden, tekens of emoji’s</td></tr>
+                <tr><th>decoderen</th><td>betekenis geven aan wat je leest</td></tr>
+                <tr><th>ruis</th><td>iets waardoor de ontvanger iets anders leest dan bedoeld</td></tr>
+                <tr><th>groepsdruk</th><td>meedoen met een groep omdat je erbij wil horen</td></tr>
+                <tr><th>gedragscode</th><td>de afspraken van een groep over hoe je met elkaar omgaat</td></tr>
+              </table>
+            </section>
+            <section class="t-card wide warn">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>Veelgemaakte fouten</h3>
+              <ul>
+                <li><strong>Zie je een link in een echt bericht?</strong> Dan is het nog niet vals. Kijk ook naar de andere vragen.</li>
+                <li><strong>Kan je duopartner niets typen?</strong> Zet zijn rol op Bewerker.</li>
+                <li><strong>Typte je een opmerking in de tabel zelf?</strong> Zet ze in een reactie met @, anders ziet niemand dat ze voor hem is.</li>
+                <li><strong>Schreef je een regel als <em>Wees lief</em>?</strong> Maak ze concreet: je moet kunnen zien of iemand ze breekt.</li>
+              </ul>
+              <p class="t-os">Alle namen en adressen in deze les zijn verzonnen.</p>
+            </section>
+          </div>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 1 ===== -->
+    <section class="pane" id="pane-1" aria-labelledby="h-1">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 1</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument</span></div><h2 id="h-1">Start</h2></header>
+        <div class="card-body">
+          <p class="intro">Je weet wat Ines vraagt en waar je werkt.</p>
+<div class="todo-box">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Open je werkdocument <strong>Groepschat-onderzoekslabo</strong>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Kijk in je opdracht in <strong class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</strong> rechts, bij <strong>Jouw werk</strong>.</p><div class="mock mock-opdracht mini-mock" role="img" aria-label="Tekening van de opdracht in Google Classroom. Rechts het vak Jouw werk, in een rood kader."><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Les 5 — Netiquette, phishing en de groepschat</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina · Les 5</span></div></div><div class="mo-werk wijs"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip"><img class="logo" src="assets/logos/docs.svg" alt=""><span>Groepschat-onderzoekslabo</span></div><div class="mo-knop">Inleveren</div></div></div></li>
+<li><p>Klik op <strong>Groepschat-onderzoekslabo</strong>. Jouw naam staat in de titel.</p><div class="mock mock-opdracht mini-mock" role="img" aria-label="Tekening van de opdracht. Bij Jouw werk staat het werkdocument in een rood kader."><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Les 5 — Netiquette, phishing en de groepschat</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina · Les 5</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip wijs"><img class="logo" src="assets/logos/docs.svg" alt=""><span>Groepschat-onderzoekslabo</span></div><div class="mo-knop">Inleveren</div></div></div></li>
+<li><p>Je werkdocument opent in een nieuw tabblad. Klik bovenaan op een tabblad om te wisselen.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome: Google Classroom, Lespagina en Groepschat-onderzoekslabo. Groepschat-onderzoekslabo staat in een rood kader."><span class="tt-tab"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 5</span><span class="tt-tab wijs actief"><img class="logo" src="assets/logos/docs.svg" alt="">Groepschat-onderzoekslabo</span></div></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst">Lees in <strong>deel 1</strong> het bericht van Ines (bericht b): wat vraagt ze, en tegen wanneer?</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Lees de ingevulde <strong>rij a</strong> in deel 1 en in deel 2: zo ga je straks zelf te werk.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Deel 1, bericht a: kijk naar het adres bij <em>Van</em> en naar het adres van de knop.</p><div class="teken-mail" role="img" aria-label="Tekening van bericht a in deel 1: een mail van EnqueteSnel. Bij Van staat het adres support@enquetesnel-login.example, in een rood kader. Onderaan staat het adres van de knop Aanmelden: enquetesnel.account-herstel.example/login, ook in een rood kader."><div class="tm-kop">Bericht a · een mail in je mailbox</div><div class="tm-rij"><span>Van</span><span class="wijs">EnqueteSnel &lt;support@enquetesnel-login.example&gt;</span></div><div class="tm-rij"><span>Onderwerp</span><span>Uw enquête wordt verwijderd</span></div><div class="tm-tekst">Uw enquête ‘Schermgebruik en slaap’ wordt binnen 24 uur verwijderd. Meld u aan om ze te bewaren.<br><span class="tm-knop">Aanmelden</span></div><div class="tm-adres wijs">Het adres van de knop: enquetesnel.account-herstel.example/login</div></div></li>
+<li><p>Deel 2, kolom a: Lukas’ bericht staat al in het schema. Straks vul je de kolom van bericht b.</p><table class="teken-wd" role="img" aria-label="Deel 2: het schema met de kolom van bericht a ingevuld in het grijs en de kolom van bericht b leeg."><tr><th></th><th>Bericht a · Lukas (voorbeeld)</th><th>Bericht b · Wout</th></tr><tr><td>Communicator</td><td class="grijs">Lukas</td><td class="vak breed"></td></tr><tr><td>Wat bedoelde die persoon?</td><td class="grijs">Dat de enquête snel gedeeld moet worden.</td><td class="vak breed"></td></tr><tr><td>Wat las de ontvanger?</td><td class="grijs">‘hij roept, hij is boos’</td><td class="vak breed"></td></tr><tr><td>Ruis</td><td class="grijs">Hoofdletters, ??? en vier berichten.</td><td class="vak breed"></td></tr></table></li>
+</ol>
+</details></li>
+</ol>
+</div>
+<div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat jouw naam niet in de titel van het document?</strong> Dan opende je niet je eigen kopie. Klik in je opdracht rechts, bij <em>Jouw werk</em>, op <em>Groepschat-onderzoekslabo</em>.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="start"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Start</button><button class="btn btn-primary" type="button" data-goto="2">Stap 2 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 2 ===== -->
+    <section class="pane" id="pane-2" aria-labelledby="h-2">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 2</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 1</span></div><h2 id="h-2">Echt of phishing?</h2></header>
+        <div class="card-body">
+          <p class="intro">Je beslist bij twee berichten of ze echt zijn, en waaraan je dat ziet.</p>
+<div class="todo-box">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><span class="doe-tekst">Lees <strong>bericht b en c</strong> in deel 1, en loop de vragen van het infokader erbij af.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Typ bij b en bij c in de lichtblauwe vakken <strong>echt</strong> of <strong>phishing</strong>, en het ene signaal dat de doorslag geeft.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in het vak onder <em>Echt of phishing?</em> en typ je antwoord.</p><table class="teken-wd" role="img" aria-label="Deel 1: het lege vak in rij b onder Echt of phishing?, in een rood kader."><tr><th>Bericht</th><th>Echt of phishing?</th><th>Welk signaal geeft de doorslag?</th></tr><tr><td>a</td><td class="grijs">Phishing</td><td class="grijs">Het woord vóór .example is niet enquetesnel.</td></tr><tr><td>b</td><td class="vak breed wijs"></td><td class="vak breed"></td></tr><tr><td>c</td><td class="vak breed"></td><td class="vak breed"></td></tr></table></li>
+<li><p>Klik in het vak ernaast en typ het ene signaal dat de doorslag geeft.<span class="sub">Kort mag: één vraag van het infokader.</span></p><table class="teken-wd" role="img" aria-label="Deel 1: het lege vak in rij b onder Welk signaal geeft de doorslag?, in een rood kader."><tr><th>Bericht</th><th>Echt of phishing?</th><th>Welk signaal geeft de doorslag?</th></tr><tr><td>a</td><td class="grijs">Phishing</td><td class="grijs">Het woord vóór .example is niet enquetesnel.</td></tr><tr><td>b</td><td class="vak breed"></td><td class="vak breed wijs"></td></tr><tr><td>c</td><td class="vak breed"></td><td class="vak breed"></td></tr></table></li>
+<li><p>Doe hetzelfde voor bericht c.</p></li>
+</ol>
+</details></li>
+</ol>
+</div>
+<div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Twijfel je bij een bericht?</strong> Loop de vijf vragen van het infokader één voor één af, en kies het signaal dat het zwaarst weegt.</p></div>
+          <div class="info" role="group" aria-labelledby="info-herken">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-herken">Zo herken je een vals bericht</h3><span class="info-bij">bij deel 1</span></div>
+            <div class="info-body">
+              <p class="info-uitleg">Geen enkele vraag bewijst het alleen. Kijk naar meer vragen samen.</p>
+              <ol class="herken">
+                <li><span><b>Onverwacht?</b> Je verwachtte het niet, of je kent de reden niet.</span></li>
+                <li><span><b>Dringend?</b> Oplichters willen dat je snel reageert, zonder na te denken.</span></li>
+                <li><span><b>Ken je de afzender?</b> Kijk het adres na. Een echt adres is geen garantie.</span></li>
+                <li><span><b>Een vreemde vraag?</b> Niemand vraagt je via een bericht om je wachtwoord.</span></li>
+                <li><span><b>Waar gaat de link naartoe?</b> Het woord vóór <strong>.example</strong> en vóór de eerste <strong>/</strong> is de echte website.</span></li>
+              </ol>
+              <div class="adressen" role="img" aria-label="Twee adressen. In www.onderzoekslabo.example/team is het woord onderzoekslabo geel gemarkeerd, in www.onderzoekslabo.inschrijven-nu.example/team het woord inschrijven-nu.">
+                <div class="adres"><span class="url">www.<span class="dom">onderzoekslabo</span>.example/team</span><span class="uitleg">de website is onderzoekslabo</span></div>
+                <div class="adres"><span class="url">www.onderzoekslabo.<span class="dom">inschrijven-nu</span>.example/team</span><span class="uitleg">de website is inschrijven-nu</span></div>
+              </div>
+              <p class="adres-legende">Geel = het woord dat telt. Elk adres in deze les eindigt op <strong>.example</strong>: dat is verzonnen. In het echt zie je <em>.be</em> of <em>.com</em>.</p>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="1"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 1</button><button class="btn btn-primary" type="button" data-goto="3">Stap 3 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 3 ===== -->
+    <section class="pane" id="pane-3" aria-labelledby="h-3">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 3</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 2</span></div><h2 id="h-3">De groepschat ontleden</h2></header>
+        <div class="card-body">
+          <p class="intro">Je ontleedt wat er misging in de groepschat van de onderzoeksgroep.</p>
+<div class="todo-box">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Lees de <strong>groepschat</strong> in deel 2 en de twee infokaders hieronder.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>De letters <strong>a</strong> tot <strong>e</strong> staan links van de berichten.</p><div class="teken-chat" role="img" aria-label="Tekening van de groepschat Onderzoek slaap met de berichten a tot e van Lukas, Elif, Wout en Yasmine."><div class="tc-kop">Onderzoek slaap 📱 · Lukas, Elif, Wout, Yasmine</div><div class="tc-rij"><span class="tc-l">a</span><div class="tc-bel"><b>Lukas · 22.47 uur</b>WIE HEEFT DE ENQUÊTE NOG NIET GEDEELD???<br>???<br>hallo<br>iemand?</div></div><div class="tc-rij"><span class="tc-l"></span><div class="tc-bel"><b>Elif · 22.55 uur</b>ik zit bij mijn oma in het ziekenhuis, morgen doe ik het</div></div><div class="tc-rij"><span class="tc-l">b</span><div class="tc-bel"><b>Wout · 22.56 uur</b>typisch elif 🙄😂</div></div><div class="tc-rij"><span class="tc-l">c</span><div><div class="tc-bel"><b>Lukas · 22.56 uur</b>😂</div><div class="tc-bel"><b>Yasmine · 22.56 uur</b>😂</div></div></div><div class="tc-rij"><span class="tc-l">d</span><div class="tc-bel"><b>Yasmine · 23.10 uur</b>[een schermafbeelding van een privébericht van Elif aan Yasmine]<br>zie je, ze heeft gewoon geen zin</div></div><div class="tc-rij"><span class="tc-l">e</span><div class="tc-sys">Lukas heeft de groep ‘slaap zonder elif’ gemaakt</div></div></div></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Vul bij <strong>bericht b</strong> de vier vakken in: de communicator, wat hij bedoelde, wat Elif las en de ruis.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in het vak onder <em>Bericht b · Wout</em> en typ je antwoord.</p><table class="teken-wd" role="img" aria-label="Deel 2: het schema. In de kolom van bericht b staat het eerste vak, bij Communicator, in een rood kader."><tr><th></th><th>Bericht a · Lukas (voorbeeld)</th><th>Bericht b · Wout</th></tr><tr><td>Communicator</td><td class="grijs">Lukas</td><td class="vak breed wijs"></td></tr><tr><td>Wat bedoelde die persoon?</td><td class="grijs">Dat de enquête snel gedeeld moet worden.</td><td class="vak breed"></td></tr><tr><td>Wat las de ontvanger?</td><td class="grijs">‘hij roept, hij is boos’</td><td class="vak breed"></td></tr><tr><td>Ruis</td><td class="grijs">Hoofdletters, ??? en vier berichten.</td><td class="vak breed"></td></tr></table></li>
+<li><p>Doe hetzelfde voor de andere drie rijen.<span class="sub">Bij de ruis hoort iets uit het bericht zelf.</span></p></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst">Beantwoord de vragen <strong>c, d en e</strong> in deel 2, elk kort.</span></li>
+<li><span class="doe-tekst">Beantwoord de <strong>slotvraag</strong> over het medium, en de vraag wat <strong>jij</strong> als getuige kan doen: noem twee dingen.</span></li>
+</ol>
+</div>
+<div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Schrijf je alleen wat Wout bedoelde?</strong> Schrijf ook wat Elif las: dat is niet hetzelfde.</p></div>
+          <div class="info" role="group" aria-labelledby="info-model">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-model">Het communicatiemodel</h3><span class="info-bij">bij deel 2</span></div>
+            <div class="info-body">
+              <div class="schema" role="img" aria-label="Het communicatiemodel: de communicator encodeert zijn bedoeling in een boodschap in de groepschat; de ontvanger decodeert de boodschap. Onder de pijlen staat de ruis.">
+                <div class="sc-blok"><b>Communicator</b><span>stuurt</span></div>
+                <div class="sc-pijl">encodeert</div>
+                <div class="sc-blok"><b>Boodschap</b><span>in de groepschat</span></div>
+                <div class="sc-pijl">decodeert</div>
+                <div class="sc-blok"><b>Ontvanger</b><span>leest</span></div>
+                <div class="sc-ruis">Ruis: iets waardoor de ontvanger iets anders leest dan de communicator bedoelde</div>
+              </div>
+              <ul>
+                <li>De communicator <strong>encodeert</strong> wat hij bedoelt in woorden, hoofdletters of emoji’s.</li>
+                <li>De ontvanger <strong>decodeert</strong>: die geeft er een betekenis aan.</li>
+                <li>Het <strong>medium</strong> is het middel waarlangs het bericht gaat: de groepschat, een e-mail, een gesprek.</li>
+                <li>Zonder gezicht of stem geven hoofdletters, ??? en emoji’s sneller <strong>ruis</strong>.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="info" role="group" aria-labelledby="info-netiquette">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-netiquette">Netiquette en pesten</h3><span class="info-bij">bij deel 2</span></div>
+            <div class="info-body">
+              <ul>
+                <li>Schrijf <strong>niet in hoofdletters</strong>: dat leest als roepen. Let op het uur: 's avonds laat voelt een bericht als druk.</li>
+                <li>Een privébericht blijft van wie het schreef. Stuur het niet door zonder toestemming.</li>
+                <li>Cyberpesten is iemand herhaaldelijk en bewust kwetsen via gsm of internet: met gemene berichten, roddels, of door iemand te laten voelen dat hij er niet bij hoort.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="2"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 2</button><button class="btn btn-primary" type="button" data-goto="4">Stap 4 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 4 ===== -->
+    <section class="pane" id="pane-4" aria-labelledby="h-4">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 4</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Gedeeld document</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 3</span></div><h2 id="h-4">Het gedeelde document</h2></header>
+        <div class="card-body">
+          <p class="intro">Eén document waarin jullie allebei werken, en dat je leraar kan lezen.</p>
+<div class="todo-box">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst"><strong>Wie het dichtst bij het raam zit</strong>, maakt een leeg Google-document en noemt het <em>Gedragscode groepschat – voornaam en voornaam</em>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Ga in een nieuw tabblad naar <a href="https://docs.google.com" target="_blank" rel="noopener">docs.google.com</a>. Klik onder <em>Een nieuw document starten</em> op <span class="ui">Leeg</span>.</p><div class="teken-ui kolom" role="img" aria-label="Tekening van docs.google.com: onder Een nieuw document starten staat het vak Leeg in een rood kader."><div class="t-grijs">Een nieuw document starten</div><div class="t-rij wijs"><span>Leeg</span></div></div></li>
+<li><p>Klik linksboven in het nieuwe document op de naam, typ de nieuwe naam en druk op <strong>Enter</strong>.<span class="sub">Bijvoorbeeld: Gedragscode groepschat – Lotte en Jens.</span></p></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst"><strong>Kopieer de lege tabel uit deel 3</strong> van je werkdocument en plak ze in het nieuwe document.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Ga naar je werkdocument. Sleep met de muis over de hele tabel, van de eerste cel tot de laatste.</p></li>
+<li><p>Druk op <strong>Ctrl + C</strong>. Klik in het nieuwe document en druk op <strong>Ctrl + V</strong>.</p></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst"><strong>Deel het document</strong> met je duopartner als <strong>Bewerker</strong>, en daarna met je leraar als <strong>Reageerder</strong>. Het adres van je leraar staat op het bord.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik rechtsboven op <span class="ui">Delen</span>.</p><div class="teken-delen" role="img" aria-label="Tekening rechtsboven in een document: de knop Delen in een rood kader."><span class="t-ico"></span><span class="t-ico rond"></span><span class="t-delen"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg> Delen</span></div></li>
+<li><p>Typ de naam van je duopartner en klik de naam aan in de lijst.</p><div class="teken-ui kolom" role="img" aria-label="Tekening van het venster Delen. In het veld staat de naam van de duopartner."><div class="t-kop">Gedragscode groepschat delen</div><div class="t-veld"><span>naam van je duopartner</span><span class="t-rol">Bewerker ▾</span></div><div class="t-grijs">Mensen op de hoogte brengen</div><div class="t-knoppen"><span class="t-knop tekst">Annuleren</span><span class="t-knop blauw">Verzenden</span></div></div></li>
+<li><p>Klik rechts van de naam op de rol en kies <strong>Bewerker</strong>.</p><div class="teken-ui kolom menu" role="img" aria-label="Tekening van de keuzelijst met rollen: Kijker, Reageerder en Bewerker. Bewerker staat in een rood kader."><div class="t-rij"><span>Kijker</span></div><div class="t-rij"><span>Reageerder</span></div><div class="t-rij wijs"><span>Bewerker</span></div></div></li>
+<li><p>Klik op <span class="ui">Verzenden</span>.</p></li>
+<li><p>Klik opnieuw op <span class="ui">Delen</span>. Doe hetzelfde met het adres van je leraar, maar kies de rol <strong>Reageerder</strong>.</p></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst"><strong>De ander</strong> opent het gedeelde document via Drive › <span class="ui">Gedeeld met mij</span>.</span></li>
+</ol>
+</div>
+<div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Kan je duopartner niets typen?</strong> Dan staat zijn rol op Kijker of Reageerder. Klik op <span class="ui">Delen</span>, kies naast zijn naam <strong>Bewerker</strong> en klik op <span class="ui">Opslaan</span>.</p></div>
+          <div class="info" role="group" aria-labelledby="info-afwezig">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-afwezig">Is je duopartner er niet?</h3><span class="info-bij">bij stap 4 en 5</span></div>
+            <div class="info-body">
+              <ul>
+                <li>Vraag je leraar: jij vormt een trio met een ander duo, of je werkt alleen.</li>
+                <li>Werk je alleen? Deel dan met je leraar als <strong>Bewerker</strong>, en zet je reactie met @ bij een regel voor je leraar.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="3"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 3</button><button class="btn btn-primary" type="button" data-goto="5">Stap 5 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 5 ===== -->
+    <section class="pane" id="pane-5" aria-labelledby="h-5">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 5</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Gedeeld document</span></div><h2 id="h-5">Onze gedragscode</h2></header>
+        <div class="card-body">
+          <p class="intro">Jullie schrijven vijf regels die zo’n groepschat voorkomen.</p>
+<div class="todo-box">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Schrijf samen <strong>vijf regels</strong> waarvan je kan zien of iemand ze breekt. Ieder schrijft er minstens twee.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in het lichtblauwe vak onder <em>Regel</em> en typ de regel.<span class="sub">Kort mag: één zin.</span></p><div class="deeldoc code mini" role="img" aria-label="Tekening van de tabel in het gedeelde document. In de eerste rij staat het vak onder Regel in een rood kader."><div class="dd-rij dd-hoofd"><span>Nr</span><span>Regel</span><span>a–e</span><span>Door</span></div><div class="dd-rij"><span class="dd-nr">1</span><span class="dd-vak wijs"></span><span class="dd-vak"></span><span class="dd-vak"><i class="kort"></i></span></div></div></li>
+<li><p>Doe hetzelfde voor de vier andere rijen. Wisselen jullie af?</p></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Typ bij elke regel de <strong>letter</strong> (a tot e) van het bericht uit de chat dat ze had voorkomen, en je <strong>voornaam</strong> bij <em>Geschreven door</em>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in het vak onder <em>Welk bericht uit de chat voorkomt ze?</em> en typ één letter.</p><div class="deeldoc code mini" role="img" aria-label="Tekening van de tabel in het gedeelde document. In de eerste rij staat het vak onder de letter in een rood kader."><div class="dd-rij dd-hoofd"><span>Nr</span><span>Regel</span><span>a–e</span><span>Door</span></div><div class="dd-rij"><span class="dd-nr">1</span><span><i></i></span><span class="dd-vak wijs"></span><span class="dd-vak"><i class="kort"></i></span></div></div></li>
+<li><p>Klik in het vak onder <em>Geschreven door</em> en typ je voornaam.</p></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Zet bij één regel van je partner een <strong>reactie</strong> met een vraag of een verbetering. Typ <strong>@</strong> en zijn of haar naam.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Selecteer de regel van je partner met de muis.</p></li>
+<li><p>Klik in de werkbalk op <span class="ui">Reactie toevoegen</span>.</p></li>
+<li><p>Typ je vraag. Typ in je vraag <strong>@</strong> en kies de naam van je duopartner in de lijst.<span class="sub">Je partner krijgt de reactie per e-mail.</span></p></li>
+<li><p>Klik op <span class="ui">Invoegen</span>.</p><div class="teken-ui kolom" role="img" aria-label="Tekening van een reactie in Google Documenten. De vraag begint met @ en de naam van de duopartner. De knop Invoegen staat in een rood kader."><div class="t-tekst"><span class="t-naam">@Lotte</span> kan je hier een voorbeeld bij geven?</div><div class="t-knoppen"><span class="t-knop tekst">Annuleren</span><span class="t-knop blauw wijs">Invoegen</span></div></div></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst"><strong>Antwoord</strong> op de reactie die je kreeg met <span class="ui">Reageren</span>, en klik op <span class="ui">Oplossen</span>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik op de reactie. Klik op <span class="ui">Reageren</span>, typ je antwoord en klik nog eens op <span class="ui">Reageren</span>.</p></li>
+<li><p>Klik rechtsboven in de reactie op <span class="ui">Oplossen</span>.</p></li>
+</ol>
+</details></li>
+</ol>
+</div>
+<div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Typte je je opmerking in de tabel zelf?</strong> Zet ze in een reactie met @, anders ziet je partner niet dat ze voor hem of haar is.</p></div>
+          <div class="info" role="group" aria-labelledby="info-bouw">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-bouw">Bouwstenen voor je regels</h3><span class="info-bij">bij stap 5</span></div>
+            <div class="info-body">
+              <p class="info-uitleg">Mag je overnemen: maak de zin af.</p>
+              <ul>
+                <li><strong>In onze groep sturen we …</strong></li>
+                <li><strong>Een privébericht …</strong></li>
+                <li><strong>Na … uur …</strong></li>
+                <li><strong>Als iemand uitlegt waarom …</strong></li>
+                <li><strong>Een probleem met één persoon …</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="4"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 4</button><button class="btn btn-primary" type="button" data-goto="6">Inleveren <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 6 ===== -->
+    <section class="pane" id="pane-6" aria-labelledby="h-6">
+      <article class="card">
+        <header class="card-head met-mascotte">
+<div>
+<div class="tags"><span class="tag tag-step">Stap 6</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg> Inleveren</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 3 en 4</span></div>
+<h2 id="h-6">Inleveren</h2>
+</div>
+<img class="mascotte-kop" src="assets/mascotte/dalton_inleveren.webp" alt="" width="120" height="120">
+</header>
+        <div class="card-body">
+          <p class="intro">Beantwoord eerst de drie vragen: zijn ze allemaal juist, dan zie je hoe je inlevert.</p>
+          <div class="quiz">
+            <div class="quiz-q" data-ok="Juist. Het woord vóór .example is resultaten-login, niet onderzoekslabo. En niemand vraagt je wachtwoord via een bericht." data-nok="Nog niet. Kijk in stap 2 in het infokader bij Waar gaat de link naartoe?">
+              <p>1. Een bericht van “het Onderzoekslabo” vraagt je schoolwachtwoord om de resultaten te zien. De link gaat naar www.onderzoekslabo.resultaten-login.example. Wat doe je?</p>
+              <div class="opts">
+                <button type="button">Klikken: er staat onderzoekslabo in de link</button>
+                <button type="button" data-right>Niet klikken: de website is resultaten-login, en je wachtwoord geef je niet via een bericht</button>
+                <button type="button">Antwoorden dat je eerst meer uitleg wil</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. De 🙄 liet het bericht anders aankomen dan je bedoelde: dat is ruis." data-nok="Nog niet. Kijk in stap 3 in het infokader: wat is ruis?">
+              <p>2. Je stuurt een klasgenoot “goed gedaan 🙄” als grapje. Zij leest het als spot. Hoe heet wat misging?</p>
+              <div class="opts">
+                <button type="button" data-right>Ruis: de 🙄 liet het bericht anders aankomen</button>
+                <button type="button">Encoderen: je klasgenoot las het fout</button>
+                <button type="button">Het medium: een chat kan geen grapjes</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. Met @ en zijn naam krijgt je partner de reactie per e-mail." data-nok="Nog niet. Kijk in stap 5: wat typ je in de reactie, zodat je partner ze krijgt?">
+              <p>3. Je zet een reactie bij een regel van je duopartner. Hoe krijgt hij ze per e-mail?</p>
+              <div class="opts">
+                <button type="button">Je typt zijn naam in hoofdletters</button>
+                <button type="button" data-right>Je typt @ en klikt zijn naam aan</button>
+                <button type="button">Je typt niets: hij ziet het vanzelf</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+          </div>
+          <p class="slot" aria-live="polite" data-codewoord="RUIS"><svg class="ic ic-dicht" aria-hidden="true"><use href="#i-lock"/></svg><svg class="ic ic-open" aria-hidden="true"><use href="#i-check-circle"/></svg><span class="slot-tekst">Beantwoord de drie vragen hierboven juist. Dan zie je hier hoe je inlevert.</span></p>
+<div class="todo-box" data-na-zelftest="c6z">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Plak in <strong>deel 3</strong> van je werkdocument de <strong>link</strong> naar jullie gedeelde document.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in het gedeelde document rechtsboven op <span class="ui">Delen</span>.</p><div class="teken-delen" role="img" aria-label="Tekening rechtsboven in een document: de knop Delen in een rood kader."><span class="t-ico"></span><span class="t-ico rond"></span><span class="t-delen"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg> Delen</span></div></li>
+<li><p>Klik op <span class="ui">Link kopiëren</span> en dan op <span class="ui">Klaar</span>.</p></li>
+<li><p>Ga naar je werkdocument. Klik in het vak onder <em>De link naar ons gedeelde document</em> en druk op <strong>Ctrl + V</strong>.</p></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst">Typ in <strong>deel 3</strong> van je werkdocument welke <strong>twee regels</strong> jij schreef, en welke <strong>reactie</strong> je gaf en wat je partner antwoordde.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Typ het <strong>codewoord</strong> in <strong>deel 4</strong>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Scroll naar het laatste deel van je werkdocument. Typ het codewoord in het eerste vak.<span class="sub">Het codewoord staat in de groene regel hierboven.</span></p></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Kruis in <strong>deel 4</strong> aan wat klopt, en beantwoord de <strong>exitvraag</strong>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Lees elke zin na. Klopt een zin? Klik in het vak ervoor en typ <strong>x</strong>.<span class="sub">Ontbreekt er nog iets? Vul dat eerst aan, ook in het gedeelde document.</span></p></li>
+<li><p>Klik in het vak onder de exitvraag en schrijf in één zin je antwoord.</p></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Lever in.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik bovenaan op het tabblad <strong class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</strong>.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome. Het tabblad Google Classroom staat in een rood kader."><span class="tt-tab wijs"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 5</span><span class="tt-tab actief"><img class="logo" src="assets/logos/docs.svg" alt="">Groepschat-onderzoekslabo</span></div></li>
+<li><p>Zoek rechts, bij <strong>Jouw werk</strong>, de knop <span class="ui">Inleveren</span>. Klik erop.</p><div class="mock mock-opdracht mini-mock" role="img" aria-label="Tekening van de opdracht. Bij Jouw werk staat de knop Inleveren in een rood kader."><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Les 5 — Netiquette, phishing en de groepschat</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina · Les 5</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip"><img class="logo" src="assets/logos/docs.svg" alt=""><span>Groepschat-onderzoekslabo</span></div><div class="mo-knop wijs">Inleveren</div></div></div></li>
+<li><p>Klik in het venster <em>Je werk inleveren?</em> nog eens op <span class="ui">Inleveren</span>.<span class="sub">Daarna staat er rechts <em>Ingeleverd</em>.</span></p></li>
+</ol>
+</details></li>
+</ol>
+            <figure class="clip"><video src="assets/video/inleveren.mp4" poster="assets/video/inleveren.jpg" autoplay loop muted playsinline controls preload="metadata" aria-label="Filmpje: rechts, bij Jouw werk, op Inleveren klikken; in het venster Je werk inleveren? nog eens op Inleveren klikken; daarna staat er Ingeleverd."></video><figcaption>Filmpje van 10 seconden: zo lever je in. Het is een andere opdracht, de knoppen zijn dezelfde.</figcaption></figure>
+</div>
+<div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat je leraar niet bij de personen met toegang?</strong> Dan kan hij jullie document niet openen. Klik op <span class="ui">Delen</span> en deel met je leraar als <strong>Reageerder</strong>.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="5"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 5</button><button class="btn btn-primary" type="button" data-goto="extra">Extra <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP extra ===== -->
+    <section class="pane" id="pane-extra" aria-labelledby="h-extra">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-extra">Extra · niet verplicht</span></div><h2 id="h-extra">Een regel over phishing</h2></header>
+        <div class="card-body">
+          <p class="intro">Alleen als je ingeleverd hebt en tijd over hebt. Het telt niet mee.</p>
+<div class="todo-box">
+<div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+<ol class="doe">
+<li><span class="doe-tekst">Typ onder de tabel in het gedeelde document een <strong>zesde regel</strong> over <strong>phishing in de groepschat</strong> (bericht c van deel 1).</span></li>
+</ol>
+</div>
+
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="6"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Inleveren</button><button class="btn" type="button" data-goto="start">Naar het begin</button></footer>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ============ RECHTS: de checklist ============ -->
+  <aside class="checklist leeg" id="checklist" aria-labelledby="h-cl">
+    <div class="cl-head">
+      <h2 id="h-cl">Checklist</h2>
+      <div class="cl-bar" role="progressbar" aria-label="Voortgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="cl-fill" id="clFill"></div></div>
+      <p class="cl-count" id="clCount">0 van 0 klaar</p>
+    </div>
+    <div class="cl-body">
+      <div class="cl-group" data-step="1"><h3>1 · Start</h3>
+        <label class="cl-item"><input type="checkbox" id="c1a"><span>Werkdocument Groepschat-onderzoekslabo open</span></label>
+        <label class="cl-item"><input type="checkbox" id="c1b"><span>Het bericht van Ines en rij a van deel 1 en 2 gelezen</span></label>
+      </div>
+      <div class="cl-group" data-step="2"><h3>2 · Echt of phishing?</h3>
+        <label class="cl-item"><input type="checkbox" id="c2a"><span>Deel 1: bericht b, echt of phishing, met een signaal</span></label>
+        <label class="cl-item"><input type="checkbox" id="c2b"><span>Deel 1: bericht c, echt of phishing, met een signaal</span></label>
+      </div>
+      <div class="cl-group" data-step="3"><h3>3 · De groepschat ontleden</h3>
+        <label class="cl-item"><input type="checkbox" id="c3a"><span>Deel 2: de vier vakken bij bericht b</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3b"><span>Deel 2: c, d en e beantwoord</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3c"><span>Deel 2: slotvraag en getuigevraag beantwoord</span></label>
+      </div>
+      <div class="cl-group" data-step="4"><h3>4 · Het gedeelde document</h3>
+        <label class="cl-item"><input type="checkbox" id="c4a"><span>Nieuw document met onze namen in de titel</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4b"><span>De lege tabel uit deel 3 erin geplakt</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4c"><span>Gedeeld met mijn duopartner als Bewerker</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4d"><span>Gedeeld met mijn leraar als Reageerder</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4e"><span>Mijn duopartner heeft het document open</span></label>
+      </div>
+      <div class="cl-group" data-step="5"><h3>5 · Onze gedragscode</h3>
+        <label class="cl-item"><input type="checkbox" id="c5a"><span>Vijf regels waarvan je kan zien of iemand ze breekt, ieder minstens twee</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5b"><span>Bij elke regel een letter van a tot e</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5c"><span>Reactie met @ voor mijn partner</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5d"><span>De reactie die ik kreeg beantwoord en opgelost</span></label>
+      </div>
+      <div class="cl-group" data-step="6"><h3>6 · Inleveren</h3>
+        <label class="cl-item"><input type="checkbox" id="c6z"><span>Zelftest: alle drie juist</span></label>
+        <label class="cl-item"><input type="checkbox" id="c6a"><span>De link en de twee vragen in deel 3</span></label>
+        <label class="cl-item"><input type="checkbox" id="c6b"><span>Codewoord getypt en deel 4 aangekruist</span></label>
+        <label class="cl-item"><input type="checkbox" id="c6c"><span>Exitvraag beantwoord</span></label>
+        <label class="cl-item"><input type="checkbox" id="c6d"><span>Werkdocument ingeleverd</span></label>
+      </div>
+    </div>
+    <div class="cl-foot">
+      <button class="btn cl-toggle" type="button" id="clToggle" aria-expanded="false">Toon alles</button>
+      <button class="btn" type="button" id="btnReset">Vinkjes wissen</button>
+      <p class="cl-note">Je vinkjes staan alleen op deze computer. Er wordt niets doorgestuurd.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- ============ Klaar! ============ -->
+<div class="klaar-overlay" id="klaar" role="dialog" aria-modal="true" aria-labelledby="h-klaar" hidden>
+  <div class="klaar-card">
+    <img class="mascotte-klaar" src="assets/mascotte/dalton_succes.webp" alt="" width="150" height="150">
+    <h2 id="h-klaar">Jullie gedragscode is klaar!</h2>
+    <p>Alles is afgevinkt en ingeleverd. Heb je nog tijd? Probeer dan het <strong>Extra</strong>.</p>
+    <button class="btn btn-primary" type="button" id="klaarSluit">Sluiten</button>
+  </div>
+</div>
+
+<footer class="site">
+  Toegepaste Informatica · GO! Dalton Gent · Het Onderzoekslabo Jongeren &amp; Welzijn is fictief. Alle namen, berichten en adressen zijn verzonnen.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

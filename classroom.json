@@ -1,0 +1,25 @@
+{
+  "_uitleg": "Wordt gelezen door _tools/zet_opdracht_klaar.py (zie _tools/CLASSROOM-KOPPELING.md). Dit bestand staat openbaar op GitHub: zet hier nooit een e-mailadres of wachtwoord in. {email} en {deadline} vult het script zelf in; klas en deadline komen uit lesdoelen.json.",
+  "titel": "Les 5 — Netiquette, phishing en de groepschat",
+  "onderwerp": "Module 1 — Digitaal organiseren en communiceren",
+  "punten": 20,
+  "instructie": [
+    "Open de lespagina en werk stap 1 tot 6 af.",
+    "Je schrijft in je werkdocument Groepschat-onderzoekslabo en in het gedeelde document dat je met je duopartner maakt.",
+    "",
+    "Mijn e-mailadres, voor stap 4: {email}",
+    "",
+    "Klik op Inleveren, ten laatste {deadline}."
+  ],
+  "bijlagen": [
+    {
+      "soort": "link",
+      "url": "https://jonasdaltongent.github.io/Groepschat-Labo/"
+    },
+    {
+      "soort": "kopie",
+      "bestand": "werkdocument/Groepschat-onderzoekslabo.docx",
+      "naam": "Groepschat-onderzoekslabo"
+    }
+  ]
+}

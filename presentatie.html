@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netiquette, phishing en de groepschat · dia's · Onderzoekslabo</title>
+  <link rel="icon" href="assets/onderzoekslabo-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/slides.css">
+  <style>
+    .klok { font-size: 22px; color: #4D5573; }
+    .compact .two { flex: 0 0 auto; }
+    .compact .panel p { margin-bottom: 10px; }
+    .compact .panel p:last-child { margin-bottom: 0; }
+    .steps1 { margin: 0; padding-left: 1.2em; }
+    .steps1 li { font-size: 27px; margin-bottom: 10px; }
+    .steps1 li:last-child { margin-bottom: 0; }
+    .compact .steps1 li { font-size: 24px; margin-bottom: 5px; }
+    .qhead { font-size: 26px; font-weight: 700; margin: 0 0 6px; line-height: 1.3; }
+    .qcol .opt { font-size: 24px; padding: 7px 16px; }
+    .slide[data-answer] .answer { margin-top: 10px; padding: 10px 16px; font-size: 23px; }
+    /* dia 3: het bericht van Ines en het voorbeeld van een gedeeld document (een sportclub) */
+    .ines { background: #fff; border: 2px solid #A7B1DE; border-left: 8px solid var(--navy); border-radius: 12px; padding: 12px 18px; font-size: 24px; line-height: 1.3; }
+    .ines b { color: var(--navy-deep); }
+    .gdoc { background: #fff; border: 2px solid #A7B1DE; border-radius: 12px 12px 6px 6px; overflow: hidden; font-family: Calibri, Arial, sans-serif; box-shadow: 0 8px 24px rgba(29,35,64,.14); }
+    .gd-kop { background: #E4E8F6; color: var(--navy-deep); font-weight: 700; font-size: 21px; padding: 6px 16px; display: flex; align-items: center; gap: 10px; }
+    .gd-kop .logo { height: 26px; width: auto; }
+    .gd-rij { display: grid; grid-template-columns: 44px 3fr 2fr 1.1fr; border-bottom: 1px solid #D5DAEE; font-size: 21px; }
+    .gd-rij > span { padding: 5px 14px; }
+    .gd-hoofd > span { background: #F4F6FC; font-weight: 700; color: var(--navy-deep); font-size: 18px; }
+    .gd-rij .vak { background: #F3F5FC; }
+    .gd-afspr { padding: 6px 14px 8px; font-size: 20px; }
+    .gd-afspr b { color: var(--navy-deep); display: block; font-size: 18px; }
+    .gd-react { margin: 4px 14px 10px; padding: 6px 12px; border: 1px solid #DADCE0; border-radius: 10px; font-size: 19px; box-shadow: 0 1px 5px rgba(60,64,67,.25); }
+    .gd-react b { color: #0B57D0; }
+    .gd-react .ok { color: #1F7A55; font-weight: 700; margin-left: 10px; }
+    /* dia 4 tot 6: de demo's. Een tekening van Google, links; de stappen rechts. Kijk naar het rode kader. */
+    .demo { display: grid; grid-template-columns: 560px 1fr; gap: 34px; align-items: start; margin-top: 6px; }
+    .g { background: #fff; border: 1px solid #DADCE0; border-radius: 14px; box-shadow: 0 4px 16px rgba(60,64,67,.28); font-family: "Segoe UI", Arial, sans-serif; font-size: 22px; color: #1F1F1F; padding: 18px 22px; }
+    .g h3 { margin: 0 0 12px; font-size: 26px; font-weight: 600; font-family: "Segoe UI", Arial, sans-serif; color: #1F1F1F; }
+    .g .veld { border: 3px solid #0B57D0; border-radius: 8px; padding: 9px 14px; display: flex; justify-content: space-between; }
+    .g .rij { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; gap: 12px; }
+    .g .grijs { color: #5F6368; font-size: 19px; }
+    .g .rol { border: 1px solid #DADCE0; border-radius: 8px; padding: 4px 14px; font-weight: 600; background: #fff; }
+    .g .lijst { border: 1px solid #DADCE0; border-radius: 8px; box-shadow: 0 2px 8px rgba(60,64,67,.25); width: 220px; margin-left: auto; padding: 4px 0; }
+    .g .lijst div { padding: 7px 16px; }
+    .g .knoppen { display: flex; justify-content: flex-end; gap: 12px; padding-top: 8px; }
+    .g .knop { padding: 8px 22px; border-radius: 24px; font-weight: 600; }
+    .g .knop.blauw { background: #0B57D0; color: #fff; }
+    .g .knop.tekst { color: #0B57D0; }
+    .wijs { box-shadow: 0 0 0 3px #fff, 0 0 0 7px #C5221F; position: relative; }
+    .g .tekstvak { border: 1px solid #DADCE0; border-radius: 8px; padding: 10px 14px; }
+    .g .naam { color: #0B57D0; font-weight: 700; }
+    .g .vink { display: flex; align-items: center; gap: 12px; padding: 8px 0; }
+    .g .vink i { width: 24px; height: 24px; border: 3px solid #0B57D0; background: #0B57D0; border-radius: 5px; position: relative; flex: none; }
+    .g .vink i::after { content: ""; position: absolute; left: 6px; top: 0; width: 6px; height: 13px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg); }
+    .g .oud { color: #5F6368; font-size: 19px; border-bottom: 1px solid #DADCE0; padding-bottom: 8px; margin-bottom: 8px; }
+    .g .gemarkeerd { background: #FFF2A8; padding: 0 4px; }
+    .g .vinkje { color: #1F7A55; font-weight: 700; }
+    .demo .steps1 li { font-size: 26px; margin-bottom: 14px; }
+    .demo .zo { font-size: 22px; color: #4D5573; margin: 4px 0 0; }
+      /* dia 4 en 5: het communicatiemodel als schema, in een kolom */
+    .sch { display: flex; flex-direction: column; width: 100%; }
+    .sch .bl { background: #fff; border: 2px solid #A7B1DE; border-radius: 12px; padding: 7px 16px; font-size: 22px; line-height: 1.25; }
+    .sch .bl b { color: var(--navy-deep); font-size: 20px; margin-right: 8px; }
+    .sch .bl .zo { display: block; color: #4D5573; font-size: 20px; }
+    .sch .pj { text-align: center; font-size: 20px; font-weight: 700; color: var(--navy-deep); padding: 3px 0; }
+    .sch .pj::before { content: "\2193  "; }
+    .sch .ruis { margin-top: 8px; border: 3px dashed #A0372A; background: #FDF1EF; color: #A0372A; border-radius: 12px; padding: 7px 16px; font-size: 21px; }
+    .sch .ruis b { margin-right: 8px; }
+    .compact .steps1 li.groot { font-size: 26px; margin-bottom: 12px; }
+    .chatbel { display: inline-block; background: #E8EAED; border-radius: 14px 14px 14px 4px; padding: 4px 14px; font-size: 21px; }
+  </style>
+</head>
+<body>
+<div class="hud"><span id="counter"></span> · <kbd>→</kbd> verder · <kbd>F</kbd> volledig scherm · <kbd>N</kbd> notities</div>
+<div class="deck"><div class="stage">
+
+<!-- 1 · vaste startdia -->
+<section class="slide start">
+  <div class="start-kop">
+    <div>
+      <p class="kicker">Toegepaste Informatica · les 5</p>
+      <h1>Netiquette, phishing en de groepschat</h1>
+    </div>
+    <span class="start-zo">Zo start je</span>
+  </div>
+  <ol class="startroute">
+    <li><div class="sr-beeld"><div class="pc-scherm"><span class="pc-avatar"></span><span class="pc-veld">••••••</span></div><div class="pc-voet"></div></div><span class="sr-tekst">Meld je aan op de computer.</span></li>
+    <li><div class="sr-beeld"><span class="url-balk"><img class="logo" src="assets/logos/classroom.svg" alt="">classroom.google.com</span><span class="url-knop">Inloggen</span></div><span class="sr-tekst">Ga in Chrome naar Classroom. Klik op <span class="knop">Inloggen</span>.</span></li>
+    <li><div class="sr-beeld"><span class="login-veld">…<b>@dalton.gent</b></span><span class="login-veld">••••••••</span></div><span class="sr-tekst">Log in met je schoolaccount.</span></li>
+    <li><div class="sr-beeld"><div class="lesgroep"><span class="lesgroep-kop">3MWWE - Informatica</span></div></div><span class="sr-tekst">Klik op je lesgroep.</span></li>
+    <li><div class="sr-beeld"><div class="tabs"><span class="tab-grijs"></span><span class="tab-aan">Schoolwerk</span><span class="tab-grijs"></span></div></div><span class="sr-tekst">Klik op <span class="knop">Schoolwerk</span>.</span></li>
+    <li><div class="sr-beeld"><span class="opdr-rij"><span class="opdr-ic"></span>Les 5 — Netiquette, phishing en de groepschat</span><span class="opdr-link">Instructies bekijken</span></div><span class="sr-tekst">Klik op de opdracht › <span class="knop">Instructies bekijken</span>.</span></li>
+    <li><div class="sr-beeld"><span class="bijl-chip aan"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 5</span></div><span class="sr-tekst">Klik op de lespagina.</span></li>
+    <li class="klaar">Klaar? Laat de lespagina open en kijk naar het bord.</li>
+  </ol>
+  <template class="note">
+    <p><strong>Instructie, 0–1'. De vaste startdia</strong> (elke les dezelfde). Laat ze op het bord staan terwijl de leerlingen aanmelden.</p>
+    <p>Het <strong>wachtwoord van de computers</strong> staat niet op de dia: de dia's staan openbaar online. Zeg het, of schrijf het op het bord.</p>
+    <p>Ga verder zodra de meesten de lespagina open hebben.</p>
+  </template>
+</section>
+
+<!-- 2 · lesstart: ophalen uit les 3 -->
+<section class="slide met-mascotte" data-answer>
+  <img class="mascotte" src="assets/mascotte/dalton_denken.webp" alt="" width="240" height="240">
+  <p class="kicker">Lesstart · 3 minuten</p>
+  <h2>Weet je het nog?</h2>
+  <div class="qcol">
+    <p class="qhead">In les 3 mailde je een jongerenwerker. Zou je haar “HALLO??? ANTWOORD AUB” sturen?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">A</span>Ja, dan antwoordt ze sneller</div>
+      <div class="opt right"><span class="n">B</span>Nee: een formele e-mail is beleefd en rustig, met een aanspreking</div>
+      <div class="opt"><span class="n">C</span>Ja, als je er een smiley bijzet</div>
+    </div>
+  </div>
+  <p class="answer">Nee. In een groepschat met vrienden denken we daar minder over na. Vandaag: wat gebeurt er als het misloopt?</p>
+  <template class="note">
+    <p><strong>Lesstart (3'), ophalen uit les 3 (do 15-10).</strong> Iedereen antwoordt tegelijk met 1, 2 of 3 vingers voor A, B of C; druk daarna op → voor het antwoord. Het antwoord is herhaling uit les 3: register en toon van een formele e-mail (beleefd, een aanspreking, rustig).</p>
+    <p>Dan de brug, hardop: <em>"In een groepschat met vrienden denken we daar minder over na. Wat gebeurt er als het misloopt? Dat ontleden jullie vandaag, en jullie schrijven er afspraken voor."</em> Laat één of twee leerlingen een voorbeeld geven van een groepschat die uit de hand liep, zonder namen.</p>
+  </template>
+</section>
+
+<!-- 3 · lesdoel en eindproduct -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · dia 1 van 4 · lesdoel en eindproduct</p>
+  <h2 style="margin-bottom:10px">Wat kan je straks?</h2>
+  <div class="two" style="grid-template-columns: 1fr 1.25fr; gap: 28px">
+    <div>
+      <ul class="rules" style="margin:0">
+        <li style="margin-bottom:12px; font-size:25px">Je herkent een <strong>vals bericht</strong>.</li>
+        <li style="margin-bottom:12px; font-size:25px">Je ontleedt een <strong>groepschat</strong> met het communicatiemodel.</li>
+        <li style="margin-bottom:12px; font-size:25px">Jullie schrijven samen een <strong>gedragscode</strong>.</li>
+      </ul>
+      <div class="ines"><b>Ines:</b> “Schrijf een gedragscode voor al onze groepschats. Deel ze met mij vóór vrijdag.”</div>
+    </div>
+    <div class="gdoc" role="img" aria-label="Voorbeeld van een gedeeld document voor een andere groepschat, die van een voetbalclub: een tabel met nummer, regel, het bericht dat de regel voorkomt en wie ze schreef, met drie regels, en een reactie met een naam na het at-teken.">
+      <div class="gd-kop"><img class="logo" src="assets/logos/docs.svg" alt="">Gedragscode appgroep voetbalclub – Noor en Ilias</div>
+      <div class="gd-rij gd-hoofd"><span>Nr</span><span>Regel</span><span>Welk bericht voorkomt ze?</span><span>Door</span></div>
+      <div class="gd-rij"><span>1</span><span class="vak">Een training afzeggen doe je vóór 18 uur.</span><span class="vak">afzeggen vlak voor de training</span><span class="vak">Noor</span></div>
+      <div class="gd-rij"><span>2</span><span class="vak">Een foto van een speler zet je pas online na zijn ja.</span><span class="vak">een foto van een speler</span><span class="vak">Ilias</span></div>
+      <div class="gd-rij"><span>3</span><span class="vak">Een grap over iemand maak je niet in de groep.</span><span class="vak">een spotprent van de keeper</span><span class="vak">Noor</span></div>
+      <div class="gd-react"><b>@Ilias</b> welke foto’s mogen er wel in? <span class="ok">Opgelost</span></div>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 1'. Lesdoel en eindproduct.</strong> Lees de drie doelen kort voor. Toon dan het bericht van Ines en het voorbeeld rechts: <em>"Dit is een ander soort groepschat, die van een voetbalclub. Zo ziet een gedragscode eruit: elke regel is één zin waarvan je kan zien of iemand ze breekt, bij elke regel staat welk bericht ze had voorkomen, en wie ze schreef. Jullie schrijven er straks vijf, voor de groepschat van de onderzoeksgroep."</em></p>
+    <p>Het bericht van Ines staat in deel 1 van het werkdocument (bericht b); de leerlingen lezen het in stap 1. Dit voorbeeld is bewust een andere chat: het is niet de oplossing.</p>
+  </template>
+</section>
+
+<!-- 4 · demo 1: het communicatiemodel -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · dia 2 van 4 · demo: het communicatiemodel</p>
+  <h2 style="margin-bottom:6px">Zo ontleed je een bericht</h2>
+  <div class="demo" style="grid-template-columns: 600px 1fr">
+    <div class="sch" role="img" aria-label="Het communicatiemodel als schema, van boven naar onder: de communicator, een pijl encodeert, de boodschap in de groepschat, een pijl decodeert, de ontvanger. Onderaan staat een kader met ruis.">
+      <div class="bl"><b>Communicator</b>wie stuurt?</div>
+      <div class="pj">encodeert</div>
+      <div class="bl"><b>Boodschap</b>in de groepschat (het medium)</div>
+      <div class="pj">decodeert</div>
+      <div class="bl"><b>Ontvanger</b>wie leest?</div>
+      <div class="ruis"><b>Ruis</b>wat zorgt voor een ander begrip?</div>
+    </div>
+    <div>
+      <ol class="steps1">
+        <li class="reveal-item">De <strong>communicator</strong> bedoelt iets en <strong>encodeert</strong> het: woorden, hoofdletters, emoji’s.</li>
+        <li class="reveal-item">Het bericht gaat via een <strong>medium</strong>: hier de groepschat.</li>
+        <li class="reveal-item">De <strong>ontvanger</strong> <strong>decodeert</strong>: hij geeft het een betekenis.</li>
+        <li class="reveal-item">Anders dan bedoeld? Dan is er <strong>ruis</strong>.</li>
+      </ol>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 2'. Demo 1, het schema.</strong> Een nieuw soort tekening: <em>"Dit is een schema van hoe een bericht van de ene persoon naar de andere gaat. Ik lees het van boven naar onder. De pijlen zeggen wat er gebeurt."</em> Druk vier keer op →: communicator en encoderen › medium › ontvanger en decoderen › ruis.</p>
+    <p>Zeg erbij: <em>"Bij een gesprek in het echt hoor en zie je veel: de stem, het gezicht. In een chat valt dat weg. Hoofdletters, vraagtekens en emoji’s moeten dat overnemen, en daar gaat het vaak mis."</em> Dit zijn de woorden uit het leerplan (communicator, boodschap, encoderen, decoderen, medium, ontvanger); ruis volgt het schoolboek.</p>
+  </template>
+</section>
+
+<!-- 5 · demo 2: bericht a in het schema -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · dia 3 van 4 · demo: bericht a van Lukas</p>
+  <h2 style="margin-bottom:6px">Bericht a in het schema</h2>
+  <div class="demo" style="grid-template-columns: 640px 1fr">
+    <div class="sch" role="img" aria-label="Het schema ingevuld voor bericht a. Communicator: Lukas, hij bedoelt dat de enquête snel gedeeld moet worden. Boodschap: WIE HEEFT DE ENQUETE NOG NIET GEDEELD, drie vraagtekens, hallo, iemand. Ontvanger: de groep, die leest: hij roept, hij is boos. Ruis in een rood kader: hoofdletters, vraagtekens en vier berichten na elkaar om 22.47 uur.">
+      <div class="bl"><b>Communicator</b>Lukas<span class="zo">bedoelt: deel de enquête, de deadline komt</span></div>
+      <div class="pj">encodeert</div>
+      <div class="bl"><b>Boodschap</b><span class="chatbel">WIE HEEFT DE ENQUÊTE NOG NIET GEDEELD???</span><span class="zo">+ ??? · hallo · iemand?, om 22.47 uur</span></div>
+      <div class="pj">decodeert</div>
+      <div class="bl"><b>Ontvanger</b>de groep<span class="zo">leest: “hij roept, hij is boos”</span></div>
+      <div class="ruis wijs"><b>Ruis</b>hoofdletters, ??? en vier berichten na elkaar</div>
+    </div>
+    <div>
+      <ol class="steps1">
+        <li class="reveal-item">Wie is de <strong>communicator</strong>, en wat <strong>bedoelt</strong> hij?</li>
+        <li class="reveal-item">Wat <strong>las</strong> de ontvanger?</li>
+        <li class="reveal-item">Waar zit de <strong>ruis</strong>? Zoek iets in het bericht zelf.</li>
+      </ol>
+      <p class="zo">Zo vul je straks bericht b in, het bericht van Wout.</p>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 2'. Demo 2, hardop denkend, bericht a.</strong> <em>"Lukas wil dat de enquête snel gedeeld wordt: dat is wat hij bedoelt. Hij schrijft het in hoofdletters, met drie vraagtekens, en stuurt er nog drie berichten achteraan. De groep leest: hij roept, hij is boos. Wat hij bedoelde en wat de groep las, is niet hetzelfde. De ruis zit in de hoofdletters, de vraagtekens en de vier berichten na elkaar."</em></p>
+    <p>Wijs het rode kader aan. Laat de leerlingen daarna kort zeggen: kon Lukas het anders doen? (één rustig bericht, overdag). Dit is de ingevulde kolom a in deel 2 van het werkdocument. Druk drie keer op →.</p>
+  </template>
+</section>
+
+<!-- 6 · demo 3: delen en een reactie met @ -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · dia 4 van 4 · demo: delen en een reactie met @</p>
+  <h2 style="margin-bottom:6px">Delen als Bewerker, reageren met @</h2>
+  <div class="demo">
+    <div class="g" role="img" aria-label="Tekening van een reactie in Google Documenten. De gemarkeerde regel is Een training afzeggen doe je vóór 18 uur. In de reactie staat @Ilias en een vraag. Onderaan staan de knoppen Annuleren en Invoegen. Invoegen staat in een rood kader.">
+      <div class="oud">Regel: <span class="gemarkeerd">Een training afzeggen doe je vóór 18 uur.</span></div>
+      <div class="tekstvak"><span class="naam">@Ilias</span> geldt dat ook in het weekend?</div>
+      <div class="knoppen"><span class="knop tekst">Annuleren</span><span class="knop blauw wijs">Invoegen</span></div>
+    </div>
+    <div>
+      <ol class="steps1">
+        <li class="reveal-item"><strong>Delen</strong> › naam › rol <strong>Bewerker</strong> › <strong>Verzenden</strong>. Je leraar krijgt <strong>Reageerder</strong>.</li>
+        <li class="reveal-item">Regel selecteren › <strong>Reactie toevoegen</strong> › <strong>@</strong> + naam › <strong>Invoegen</strong>.</li>
+        <li class="reveal-item">De ander klikt op <strong>Reageren</strong>, typt een antwoord en klikt op <strong>Oplossen</strong>.</li>
+      </ol>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 2'. Demo 4, kort.</strong> Delen kennen ze uit les 2 (een map in Drive met een rol); nu is het een document. <em>"Mijn partner moet kunnen typen, dus Bewerker. Mijn leraar krijgt Reageerder: die mag lezen en reageren, niets veranderen. Het adres staat op het bord."</em></p>
+    <p>Dan de reactie met @: <em>"Een reactie is een opmerking naast de tekst: de regel zelf verandert niet. Met @ en de naam krijgt mijn partner een e-mail. Mijn partner klikt op Reageren, typt een antwoord, en klikt op Oplossen als het geregeld is."</em> Een nieuw soort tekening van Google: waar je kijkt, het rode kader (Invoegen). Druk drie keer op →.</p>
+  </template>
+</section>
+
+<!-- 7 · controle -->
+<section class="slide" data-answer>
+  <p class="kicker">Controle · iedereen antwoordt</p>
+  <h2>Wat doet Elif?</h2>
+  <div class="qcol">
+    <p class="qhead">Elif leest “typisch elif 🙄😂” als uitlachen. Wat doet Elif dan?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">1</span>Encoderen</div>
+      <div class="opt right"><span class="n">2</span>Decoderen</div>
+      <div class="opt"><span class="n">3</span>Verzenden</div>
+    </div>
+  </div>
+  <p class="answer">Elif decodeert: zij geeft het bericht een betekenis. Wout bedoelde misschien een grapje, Elif las uitlachen: dat verschil is de ruis.</p>
+  <template class="note">
+    <p><strong>Controle (1'). Iedereen antwoordt tegelijk</strong> met 1, 2 of 3 vingers. Wie 1 of 3 toont, blijft bij de start van stap 3 3 tot 5 minuten bij jou: samen bericht b in het schema zetten. Vraag: <em>"Wie encodeert hier, en wie decodeert?"</em></p>
+  </template>
+</section>
+
+<!-- 8 · zo werk je verder -->
+<section class="slide compact met-mascotte">
+  <img class="mascotte" src="assets/mascotte/dalton_laptop.webp" alt="" width="240" height="240">
+  <p class="kicker">Keuzewerktijd · <span class="eindtijd">40 minuten</span></p>
+  <h2>Zo werk je verder</h2>
+  <div class="two" style="grid-template-columns: 1.6fr 1fr">
+    <div>
+      <ol class="steps1 kloklijst" data-lesmomenten="2026-11-19/14.35/15.25/3MWWE/8" data-beltijden="8.25-9.15 9.15-10.05 10.25-11.15 11.15-12.05 12.05-12.55 13.45-14.35 14.35-15.25 15.25-16.15 16.15-17.05">
+        <li data-min="3" data-samen>Start <span class="klok tijd">samen &#10003;</span></li>
+        <li data-min="4">Echt of phishing? <span class="klok tijd">4'</span></li>
+        <li data-min="12">De groepschat ontleden <span class="klok tijd">12'</span></li>
+        <li data-min="5">Het gedeelde document <span class="klok tijd">5'</span></li>
+        <li data-min="11">Onze gedragscode <span class="klok tijd">11'</span></li>
+        <li data-min="5">Inleveren <span class="klok tijd">5'</span></li>
+      </ol>
+    </div>
+    <div class="panel navy">
+      <p style="font-size:24px"><strong>Het document maken?</strong></p>
+      <p style="font-size:24px">Wie het dichtst bij het raam zit.</p>
+      <p style="font-size:24px;margin-top:10px"><strong>Vast?</strong><br>1. <em>Toon stapjes</em><br>2. Je duopartner<br>3. Ik</p>
+    </div>
+  </div>
+  <p class="klok" style="margin-top:14px;font-size:24px">
+    <strong>Alles staat in de opdracht in <span class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span></strong> <em>Les 5 — Netiquette, phishing en de groepschat</em>: de lespagina en rechts onder <em>Jouw werk</em> je werkdocument Groepschat-onderzoekslabo. Het adres van je leraar staat op het bord.<br>Adres: jonasdaltongent.github.io/Groepschat-Labo/ <!-- PAS AAN: Pages-adres --></p>
+  <template class="note">
+    <p><strong>Keuzewerktijd.</strong> Laat deze dia staan zolang ze werken. De kloktijden komen uit de planning; <strong>T</strong> rekent opnieuw vanaf nu.</p>
+    <p><strong>Schrijf het e-mailadres van je leraar op het bord</strong> (het staat nooit op een dia of de lespagina) en zeg: <em>"Het document maakt wie het dichtst bij het raam zit. Dat is de enige regel: zo hoeven jullie niet te discussiëren."</em> Stap 1 doen ze nu samen (3'): het werkdocument openen, het bericht van Ines lezen en rij a van deel 1 en 2. Wie op de vorige dia 1 of 3 koos, blijft 3 tot 5 minuten bij jou.</p>
+    <p>Eerste rondgang (stap 2 en 3): typt iedereen in de lichtblauwe vakken, kiezen ze bij deel 1 één signaal dat telt, en staat bij de ruis iets uit het bericht zelf? Tweede rondgang (stap 4 en 5): staat de duopartner als <strong>Bewerker</strong>, jij als <strong>Reageerder</strong>? Zijn de regels <em>concreet</em> (je kan zien of iemand ze breekt, niet <em>wees lief</em>), staat bij elke regel een letter, en schrijft ieder er minstens twee? Een duo zonder partner: trio met een ander duo, of alleen (zie het infokader in stap 4).</p>
+    <p>Wie vraagt hoe hij inlevert: kijk eerst onder de drie vragen van de zelftest in stap 6.</p>
+  </template>
+</section>
+
+<!-- 9 · exitvraag -->
+<section class="slide met-mascotte" data-answer>
+  <img class="mascotte" src="assets/mascotte/dalton_hulp.webp" alt="" width="240" height="240">
+  <p class="kicker">Afsluiten · laatste minuut</p>
+  <h2 style="margin-bottom:10px">Eén vraag voor je vertrekt</h2>
+  <div class="qcol">
+    <p class="qhead">Welke ruis uit de groepschat was er in een gesprek in het echt niet geweest?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">A</span>Dat Elif bij haar oma in het ziekenhuis zat</div>
+      <div class="opt right"><span class="n">B</span>De toon: je ziet en hoort of iemand grapt of boos is</div>
+      <div class="opt"><span class="n">C</span>De namen van de leden</div>
+    </div>
+  </div>
+  <p class="answer">In een gesprek zie en hoor je de toon en het gezicht, en kon Elif meteen zeggen waarom. Dezelfde vraag staat in deel 4 van je werkdocument.</p>
+  <p style="margin-top:6px;font-size:25px"><strong>Vertrek je? Log uit, of druk op Windows + L.</strong></p>
+  <template class="note">
+    <p><strong>Afsluiting, laatste minuut van de keuzewerktijd.</strong> Laat twee of drie leerlingen antwoorden en druk op → voor het antwoord.</p>
+    <p>Zeg mondeling dat wie niet klaar is, toch inlevert (of thuis afwerkt vóór vrijdag 20 november om 20.00 uur). Een duo dat de gedragscode nog niet af heeft, werkt ze samen verder af in het gedeelde document: de link in het werkdocument blijft werken.</p>
+    <p><strong>Vertrekken:</strong> iedereen logt uit, of drukt op Windows + L.</p>
+  </template>
+</section>
+
+</div></div>
+<div class="notes" id="notes"></div>
+<script src="js/slides.js"></script>
+</body>
+</html>

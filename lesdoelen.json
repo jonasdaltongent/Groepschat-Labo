@@ -1,0 +1,26 @@
+{
+  "lesid": "groepschat-labo",
+  "lesnr": "05",
+  "titel": "Netiquette, phishing en de groepschat",
+  "week": 11,
+  "schooljaar": "2026-2027",
+  "datum": "2026-11-19",
+  "_opmerking_datum": "Donderdag 19 november 2026, 8ste lesuur (14.35-15.25), lokaal 18. Met les 4 erbij (lessenplan MWW § 7, Jonas 14-10-2026).",
+  "klasgroepen": [
+    "3 MWW"
+  ],
+  "_opmerking_klasgroepen": "De klasgroepcode moet '3 MWW' zijn (met spatie): daarmee vindt _tools/update_leerdoelen.py het blad. De echte klasnaam staat hieronder.",
+  "klasnaam": "3MWWE",
+  "finaliteit": "doorstroomfinaliteit",
+  "lesduur_minuten": 50,
+  "evaluatie": "formatief (portfolio: gedragscode)",
+  "deadline": "2026-11-20T20:00",
+  "bron": "https://github.com/jonasdaltongent/Groepschat-Labo",
+  "doelen": [
+    {"code": "BV2_04.04", "rol": "kern"},
+    {"code": "BV2_05.01", "rol": "kern"},
+    {"code": "WD2_15.02.04", "rol": "ondersteunend"},
+    {"code": "BV2_04.01", "rol": "ondersteunend"},
+    {"code": "WD2_14.01.02", "rol": "contextueel"}
+  ]
+}
